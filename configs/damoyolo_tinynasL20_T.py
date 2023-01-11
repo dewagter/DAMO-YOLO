@@ -30,10 +30,10 @@ class Config(MyConfig):
         self.train.augment.mosaic_mixup.shear = 0.2
         self.train.augment.mosaic_mixup.mosaic_scale = (0.1, 2.0)
 
-	# pretrained model
-	self.train.finetune_path='./models/damoyolo_tinynasL20_T.pth'
+        # pretrained model
+        self.train.finetune_path='./models/damoyolo_tinynasL20_T_418.pth'
 
-	# dataset
+        # dataset
         self.dataset.train_ann = ('coco_train', )
         self.dataset.val_ann = ('coco_val', )
 
