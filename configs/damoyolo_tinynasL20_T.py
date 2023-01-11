@@ -30,8 +30,6 @@ class Config(MyConfig):
         self.train.augment.mosaic_mixup.shear = 0.2
         self.train.augment.mosaic_mixup.mosaic_scale = (0.1, 2.0)
 
-        # pretrained model
-        self.train.finetune_path='./models/damoyolo_tinynasL20_T_418.pth'
 
         # dataset
         self.dataset.train_ann = ('coco_train', )
@@ -67,7 +65,7 @@ class Config(MyConfig):
 
         ZeroHead = {
             'name': 'ZeroHead',
-            'num_classes': 7,
+            'num_classes': 80,
             'in_channels': [64, 128, 256],
             'stacked_convs': 0,
             'reg_max': 16,

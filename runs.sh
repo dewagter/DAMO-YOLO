@@ -1,0 +1,1 @@
+python tools/demo.py -f ./configs/damoyolo_tinynasL20_T.py --engine ./models/damoyolo_tinynasL20_T.pth --engine_type torch --conf 0.25 --infer_size 640 640 --device cpu --path ../MAVLAB_SHIPS/02_guardian_018/images/img0018.jpg
