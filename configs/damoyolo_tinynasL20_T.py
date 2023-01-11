@@ -30,8 +30,12 @@ class Config(MyConfig):
         self.train.augment.mosaic_mixup.shear = 0.2
         self.train.augment.mosaic_mixup.mosaic_scale = (0.1, 2.0)
 
-        self.dataset.train_ann = ('coco_2017_train', )
-        self.dataset.val_ann = ('coco_2017_val', )
+	# pretrained model
+	self.train.finetune_path='./models/damoyolo_tinynasL20_T.pth'
+
+	# dataset
+        self.dataset.train_ann = ('coco_train', )
+        self.dataset.val_ann = ('coco_val', )
 
         # backbone
         structure = self.read_structure(
@@ -63,7 +67,7 @@ class Config(MyConfig):
 
         ZeroHead = {
             'name': 'ZeroHead',
-            'num_classes': 80,
+            'num_classes': 7,
             'in_channels': [64, 128, 256],
             'stacked_convs': 0,
             'reg_max': 16,
