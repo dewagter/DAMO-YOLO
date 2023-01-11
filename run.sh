@@ -1,0 +1,1 @@
+python tools/demo.py -f ./configs/damoyolo_tinynasL25_S.py --engine ./models/damoyolo_tinynasL25_S_456.onnx --engine_type onnx --conf 0.25 --infer_size 640 640 --device cpu --path ../MAVLAB_SHIPS/02_guardian_018/images/img0021.jpg
